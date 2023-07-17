@@ -1,4 +1,4 @@
-package com.parser.urlChargerService.common;
+package com.parser.common;
 
 public final class Constants {
 

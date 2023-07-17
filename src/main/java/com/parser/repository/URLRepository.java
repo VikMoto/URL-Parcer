@@ -1,7 +1,7 @@
-package com.parser.urlChargerService.dao;
+package com.parser.repository;
 
 
-import com.parser.urlChargerService.model.URL;
+import com.parser.domain.URL;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

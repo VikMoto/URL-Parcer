@@ -1,4 +1,4 @@
-package com.parser.urlChargerService.model;
+package com.parser.domain;
 
 
 import jakarta.persistence.Column;

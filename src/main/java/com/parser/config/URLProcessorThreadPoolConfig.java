@@ -1,4 +1,4 @@
-package com.parser.urlChargerService.config;
+package com.parser.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

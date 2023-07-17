@@ -1,4 +1,4 @@
-package com.parser.urlChargerService.service;
+package com.parser.service;
 
 //@Service
 //public class KafkaService {

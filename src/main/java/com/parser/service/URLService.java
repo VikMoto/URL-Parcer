@@ -1,8 +1,8 @@
-package com.parser.urlChargerService.service;
+package com.parser.service;
 
 
-import com.parser.urlChargerService.dao.URLRepository;
-import com.parser.urlChargerService.model.URL;
+import com.parser.repository.URLRepository;
+import com.parser.domain.URL;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

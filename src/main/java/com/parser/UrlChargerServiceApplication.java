@@ -1,13 +1,13 @@
-package com.parser.urlChargerService;
+package com.parser;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UrlFeederServiceApplication {
+public class UrlChargerServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UrlFeederServiceApplication.class, args);
+        SpringApplication.run(UrlChargerServiceApplication.class, args);
     }
 
 }

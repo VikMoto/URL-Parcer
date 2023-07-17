@@ -2,10 +2,12 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.1.1'
     id 'io.spring.dependency-management' version '1.1.0'
+
 }
 
+
 group = 'com.parser'
-version = '0.0.1-SNAPSHOT'
+version = ''
 
 java {
     sourceCompatibility = '17'
@@ -21,17 +23,26 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 // https://mvnrepository.com/artifact/org.springframework.kafka/spring-kafka
     implementation 'org.springframework.kafka:spring-kafka:3.0.7'
+    // https://mvnrepository.com/artifact/com.linecorp.armeria/armeria-retrofit2
+    implementation 'com.linecorp.armeria:armeria-retrofit2:1.24.2'
+    // https://mvnrepository.com/artifact/org.jsoup/jsoup
+    implementation 'org.jsoup:jsoup:1.16.1'
+
+
 
 //    implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter'
+
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.flywaydb:flyway-core'
+//    implementation 'org.flywaydb:flyway-core'
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
     testImplementation 'org.projectlombok:lombok:1.18.26'
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'org.postgresql:postgresql'
     annotationProcessor 'org.projectlombok:lombok'
+
 
     // https://mvnrepository.com/artifact/org.springframework.kafka/spring-kafka-test
 //    testImplementation 'org.springframework.kafka:spring-kafka-test:3.0.7'
@@ -42,6 +53,25 @@ dependencies {
     testImplementation 'org.testcontainers:postgresql'
 }
 
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.parser.UrlChargerServiceApplication'
+        )
+    }
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }
+tasks.named("bootJar") {
+    archiveClassifier = 'spring-boot-webapp'
+    version = project.version
+
+        mainClass = 'com.parser.UrlChargerServiceApplication'
+
+}
+
+
+
+
