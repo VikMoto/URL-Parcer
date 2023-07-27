@@ -1,1 +1,3 @@
 rootProject.name = 'url-chargerService'
+include 'kafka'
+

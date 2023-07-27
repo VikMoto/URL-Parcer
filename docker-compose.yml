@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres
+    container_name: Url-charger-test
+    environment:
+      POSTGRES_DB: shop
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5436:5432"
+
+#  postgres-userchat:
+#    image: postgres
+#    container_name: postgres-container-userchat
+#    environment:
+#      POSTGRES_DB: webauth2
+#      POSTGRES_USER: postgres
+#      POSTGRES_PASSWORD: postgres
+#    ports:
+#      - "54332:5432"

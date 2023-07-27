@@ -36,6 +36,11 @@ public class URLService {
     private URLRepository urlRepository;
 
     @Async
+    public void save(URL url) {
+        urlRepository.save( url);
+    }
+
+    @Async
     public void save(Set<URL> urls) {
         for(URL url : urls) {
             try {
